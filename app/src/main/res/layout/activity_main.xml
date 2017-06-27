@@ -9,21 +9,17 @@
     tools:context="com.example.redfish.newsapp.MainActivity">
 
 
-    <ProgressBar  android:indeterminate="true"
-        android:layout_centerInParent="true"
-        android:layout_width="346dp"
-        android:layout_height="323dp"
-        android:id="@+id/progressBar"></ProgressBar>
-
-    <ScrollView
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
-        android:layout_height="495dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="0dp">
-        <TextView
-            android:id="@+id/display.JSON"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </ScrollView>
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 
 </LinearLayout>
